@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="projectsAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="300.0" style="-fx-background-color: #E6E6FA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ProjectPageController">
+   <children>
+      <Button layoutX="112.5" layoutY="60.0" mnemonicParsing="false" onAction="#createNewProject" prefHeight="25.0" prefWidth="75.0" text="New Proj" />
+      <TextField fx:id="searchField" layoutX="75.0" layoutY="20.0" onKeyReleased="#searchProject" prefHeight="25.0" prefWidth="150.0" promptText="Search" />
+      <ScrollPane fitToWidth="true" layoutX="20.0" layoutY="100.0" maxWidth="260.0" prefHeight="700.0" prefWidth="260.0" vbarPolicy="ALWAYS">
+         <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <VBox fx:id="projectsPane" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="240.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

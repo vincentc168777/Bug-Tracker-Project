@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="ticketCreationBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1300.0" spacing="30.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CreateTicketController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: transparent transparent black transparent;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="850.0" prefWidth="1300.0" text="Create New Ticket" textAlignment="CENTER">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox maxWidth="520.0" prefHeight="106.0" prefWidth="520.0" style="-fx-border-color: black; -fx-background-color: #D3D3D3;">
+         <children>
+            <HBox alignment="CENTER_LEFT" maxWidth="520.0" prefHeight="50.0" prefWidth="200.0" spacing="31.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Ticket Name:">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="ticketNameText" prefHeight="28.0" prefWidth="300.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="62.0" maxWidth="520.0" prefHeight="50.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Project Name:" textAlignment="CENTER">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="projSelect" prefHeight="25.0" prefWidth="302.0" promptText="Choose Project" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox prefWidth="1200.0">
+         <children>
+            <Label text="Description:">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="ticketDescrip" prefHeight="200.0" prefWidth="1010.0">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </TextArea>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <VBox alignment="CENTER_RIGHT" prefHeight="220.0" prefWidth="100.0" spacing="20.0" translateY="-10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#createNewComment" text="New Comment">
+               <VBox.margin>
+                  <Insets right="145.0" />
+               </VBox.margin>
+            </Button>
+            <ScrollPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="190.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+              <content>
+                <AnchorPane>
+                     <children>
+                        <VBox fx:id="commentBox" prefWidth="870.0" spacing="10.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <VBox.margin>
+                  <Insets left="200.0" right="200.0" />
+               </VBox.margin>
+            </ScrollPane>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></VBox>
+      <HBox alignment="CENTER_RIGHT" prefWidth="200.0" spacing="60.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#cancelTicket" prefHeight="62.0" prefWidth="160.0" text="Cancel" />
+            <Button mnemonicParsing="false" onAction="#createTicket" prefHeight="62.0" prefWidth="160.0" text="Save" />
+         </children>
+         <VBox.margin>
+            <Insets right="100.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
